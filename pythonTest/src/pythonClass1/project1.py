@@ -4,12 +4,13 @@ Created on Oct 8, 2015
 @author: andreaslindberg
 '''
 
-print 'tjena'
+from googlefinance import getQuotes
+import json
 
-for x in range(0, 3):
-    print "We're on time %d" % (x)
+print json.dumps(getQuotes('CSCO'),indent=2)
 
-print 'OK'
+print json.dumps(getQuotes('AAPL'),indent=2)
 
-print'test'
+print json.dumps(getQuotes('002502'),indent=2)
 
+print 'Klar!'
